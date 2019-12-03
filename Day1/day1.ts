@@ -8,7 +8,7 @@ import path from 'path'
     return nextFuelMass < 0 ? 0 : nextFuelMass + calcFuelMass(nextFuelMass)
   }
   try {
-    const inputData = await fp.readFile(path.join(__dirname, './input'), { encoding: 'utf8' })
+    const inputData = await fp.readFile(path.join(__dirname, './day1input'), { encoding: 'utf8' })
     const input = inputData.split('\n') // don't love ingesting data like this but the input was small so this is okay
     const total = input.reduce((acc, mass) => {
       // return acc + Math.floor(Number.parseInt(mass) / 3) - 2 // Part 1
